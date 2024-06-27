@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>НЕМА - Персональний вебсайт</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -11,14 +12,20 @@
             background-color: #f0f2f5;
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
         }
         .container {
             max-width: 800px;
-            margin: 50px auto;
+            margin: 20px;
             background: #fff;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
         }
         h1 {
             text-align: center;
@@ -79,90 +86,304 @@
             margin: 30px 0 10px;
             text-align: center;
         }
+        .language-switcher {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .language-switcher button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #3498db;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .language-switcher button:hover {
+            background-color: #2c3e50;
+        }
+        .pattern-left, .pattern-right {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            width: 50px;
+            background-color: #3498db;
+            color: white;
+            font-family: monospace;
+            font-size: 10px;
+            overflow: hidden;
+        }
+        .pattern-left {
+            left: 0;
+        }
+        .pattern-right {
+            right: 0;
+        }
+        .pattern-content {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            white-space: pre;
+        }
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="logo">НЕ<span>МА</span></div>
-        <h2>Ласкаво просимо на мій персональний сайт!</h2>
-        <p>Нижче ви знайдете посилання на мої ресурси.</p>
-        
-        <div class="group">
-            <h2 class="group-title">Мої канали</h2>
-            <ul>
-                <li>
-                    <a href="https://www.youtube.com/channel/UC2KsT8IkA97i4gvDgDjVfsg" target="_blank">YouTube канал</a>
-                    <div class="link-description">Переглядайте мої відео та стріми на YouTube.</div>
-                </li>
-                <li>
-                    <a href="https://www.twitch.tv/helvla" target="_blank">Twitch канал</a>
-                    <div class="link-description">Дивіться мої живі трансляції на Twitch.</div>
-                </li>
-            </ul>
-        </div>
-        
-        <div class="group">
-            <h2 class="group-title">Мої ресурси</h2>
-            <ul>
-                <li>
-                    <a href="https://ru.ucoin.net/uid42474" target="_blank">Колекція монет</a>
-                    <div class="link-description">Перегляньте мою колекцію монет та можливості обміну.</div>
-                </li>
-                <li>
-                    <a href="https://play.google.com/store/apps/details?id=com.hema.musicplayer" target="_blank">Музичний плеєр</a>
-                    <div class="link-description">Скачайте мій музичний плеєр для Android з унікальною системою оцінок.</div>
-                </li>
-            </ul>
-        </div>
-        
-        <div class="group">
-            <h2 class="group-title">Соціальні мережі</h2>
-            <ul>
-                <li>
-                    <a href="https://www.instagram.com/petro_hema" target="_blank">Instagram</a>
-                    <div class="link-description">Слідкуйте за моїм життям та діяльністю на Instagram.</div>
-                </li>
-                <li>
-                    <a href="https://www.tiktok.com/@h.e.lvl.a?is_from_webapp=1&sender_device=pc" target="_blank">TikTok</a>
-                    <div class="link-description">Переглядайте мої відео на TikTok.</div>
-                </li>
-            </ul>
-        </div>
-        
-        <div class="group">
-            <h2 class="group-title">Ігрові профілі</h2>
-            <ul>
-                <li>
-                    <a href="https://worldoftanks.eu/uk/community/accounts/598102328-HEIVIA/?utm_source=global-nav&utm_medium=link&utm_campaign=wot-portal" target="_blank">World of Tanks</a>
-                    <div class="link-description">Перегляньте мій профіль та досягнення у грі World of Tanks.</div>
-                </li>
-                <li>
-                    <a href="https://worldoftanks.eu/referral/8401725917f543c3baea6d68729aed7f" target="_blank">Реферальна програма World of Tanks</a>
-                    <div class="link-description">Приєднуйтеся до гри через мій реферальний код.</div>
-                </li>
-            </ul>
-        </div>
-        
-        <div class="group">
-            <h2 class="group-title">Фінансова підтримка</h2>
-            <div class="support">
-                <p>Якщо у вас є бажання мене підтримати фінансово, мій Binance Id: 184921509</p>
-            </div>
-        </div>
-        
-        <div class="group">
-            <h2 class="group-title">Контакти</h2>
-            <ul>
-                <li>
-                    <a href="mailto:feedback.hema@gmail.com">Написати мені на пошту</a>
-                    <div class="link-description">Зв'яжіться зі мною через email.</div>
-                </li>
-                <li>
-                    <a href="https://t.me/CryptoFolioTactic_bot" target="_blank">Telegram канал</a>
-                    <div class="link-description">Дізнавайтесь про мою тактику збільшення вартості криптовалютного портфеля.</div>
-                </li>
-            </ul>
+    <div class="pattern-left">
+        <div class="pattern-content">
+            *\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
+            \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
         </div>
     </div>
+    <div class="pattern-right">
+        <div class="pattern-content">
+            \*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
+            *\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
+        </div>
+    </div>
+    <div class="container">
+        <div class="logo">НЕ<span>МА</span></div>
+        <div class="language-switcher">
+            <button onclick="switchLanguage('uk')">Українська</button>
+            <button onclick="switchLanguage('ru')">Русский</button>
+            <button onclick="switchLanguage('en')">English</button>
+        </div>
+        <div id="content-uk">
+            <h2>Ласкаво просимо на мій персональний сайт!</h2>
+            <p>Нижче ви знайдете посилання на мої ресурси.</p>
+            <div class="group">
+                <h2 class="group-title">Мої канали</h2>
+                <ul>
+                    <li>
+                        <a href="https://www.youtube.com/channel/UC2KsT8IkA97i4gvDgDjVfsg" target="_blank">YouTube канал</a>
+                        <div class="link-description">Переглядайте мої відео та стріми на YouTube.</div>
+                    </li>
+                    <li>
+                        <a href="https://www.twitch.tv/helvla" target="_blank">Twitch канал</a>
+                        <div class="link-description">Дивіться мої живі трансляції на Twitch.</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="group">
+                <h2 class="group-title">Мої ресурси</h2>
+                <ul>
+                    <li>
+                        <a href="https://ru.ucoin.net/uid42474" target="_blank">Колекція монет</a>
+                        <div class="link-description">Перегляньте мою колекцію монет та можливості обміну.</div>
+                    </li>
+                    <li>
+                        <a href="https://play.google.com/store/apps/details?id=com.hema.musicplayer" target="_blank">Музичний плеєр</a>
+                        <div class="link-description">Скачайте мій музичний плеєр для Android з унікальною системою оцінок.</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="group">
+                <h2 class="group-title">Соціальні мережі</h2>
+                <ul>
+                    <li>
+                        <a href="https://www.instagram.com/petro_hema" target="_blank">Instagram</a>
+                        <div class="link-description">Слідкуйте за моїм життям та діяльністю на Instagram.</div>
+                    </li>
+                    <li>
+                        <a href="https://www.tiktok.com/@h.e.lvl.a?is_from_webapp=1&sender_device=pc" target="_blank">TikTok</a>
+                        <div class="link-description">Переглядайте мої відео на TikTok.</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="group">
+                <h2 class="group-title">Ігрові профілі</h2>
+                <ul>
+                    <li>
+                        <a href="https://worldoftanks.eu/uk/community/accounts/598102328-HEIVIA/?utm_source=global-nav&utm_medium=link&utm_campaign=wot-portal" target="_blank">World of Tanks</a>
+                        <div class="link-description">Перегляньте мій профіль та досягнення у грі World of Tanks.</div>
+                    </li>
+                    <li>
+                        <a href="https://worldoftanks.eu/referral/8401725917f543c3baea6d68729aed7f" target="_blank">Реферальна програма World of Tanks</a>
+                        <div class="link-description">Приєднуйтеся до гри через мій реферальний код.</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="group">
+                <h2 class="group-title">Фінансова підтримка</h2>
+                <div class="support">
+                    <p>Якщо у вас є бажання мене підтримати фінансово, мій Binance Id: 184921509</p>
+                </div>
+            </div>
+            <div class="group">
+                <h2 class="group-title">Контакти</h2>
+                <ul>
+                    <li>
+                        <a href="mailto:feedback.hema@gmail.com">Написати мені на пошту</a>
+                        <div class="link-description">Зв'яжіться зі мною через email.</div>
+                    </li>
+                    <li>
+                        <a href="https://t.me/CryptoFolioTactic_bot" target="_blank">Telegram канал</a>
+                        <div class="link-description">Дізнавайтесь про мою тактику збільшення вартості криптовалютного портфеля.</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="content-ru" class="hidden">
+            <h2>Добро пожаловать на мой персональный сайт!</h2>
+            <p>Ниже вы найдете ссылки на мои ресурсы.</p>
+            <div class="group">
+                <h2 class="group-title">Мои каналы</h2>
+                <ul>
+                    <li>
+                        <a href="https://www.youtube.com/channel/UC2KsT8IkA97i4gvDgDjVfsg" target="_blank">YouTube канал</a>
+                        <div class="link-description">Смотрите мои видео и стримы на YouTube.</div>
+                    </li>
+                    <li>
+                        <a href="https://www.twitch.tv/helvla" target="_blank">Twitch канал</a>
+                        <div class="link-description">Смотрите мои живые трансляции на Twitch.</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="group">
+                <h2 class="group-title">Мои ресурсы</h2>
+                <ul>
+                    <li>
+                        <a href="https://ru.ucoin.net/uid42474" target="_blank">Коллекция монет</a>
+                        <div class="link-description">Просмотрите мою коллекцию монет и возможности обмена.</div>
+                    </li>
+                    <li>
+                        <a href="https://play.google.com/store/apps/details?id=com.hema.musicplayer" target="_blank">Музыкальный плеер</a>
+                        <div class="link-description">Скачайте мой музыкальный плеер для Android с уникальной системой оценок.</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="group">
+                <h2 class="group-title">Социальные сети</h2>
+                <ul>
+                    <li>
+                        <a href="https://www.instagram.com/petro_hema" target="_blank">Instagram</a>
+                        <div class="link-description">Следите за моей жизнью и деятельностью в Instagram.</div>
+                    </li>
+                    <li>
+                        <a href="https://www.tiktok.com/@h.e.lvl.a?is_from_webapp=1&sender_device=pc" target="_blank">TikTok</a>
+                        <div class="link-description">Смотрите мои видео в TikTok.</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="group">
+                <h2 class="group-title">Игровые профили</h2>
+                <ul>
+                    <li>
+                        <a href="https://worldoftanks.eu/ru/community/accounts/598102328-HEIVIA/?utm_source=global-nav&utm_medium=link&utm_campaign=wot-portal" target="_blank">World of Tanks</a>
+                        <div class="link-description">Посмотрите мой профиль и достижения в игре World of Tanks.</div>
+                    </li>
+                    <li>
+                        <a href="https://worldoftanks.eu/referral/8401725917f543c3baea6d68729aed7f" target="_blank">Реферальная программа World of Tanks</a>
+                        <div class="link-description">Присоединяйтесь к игре через мой реферальный код.</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="group">
+                <h2 class="group-title">Финансовая поддержка</h2>
+                <div class="support">
+                    <p>Если у вас есть желание меня поддержать финансово, мой Binance Id: 184921509</p>
+                </div>
+            </div>
+            <div class="group">
+                <h2 class="group-title">Контакты</h2>
+                <ul>
+                    <li>
+                        <a href="mailto:feedback.hema@gmail.com">Написать мне на почту</a>
+                        <div class="link-description">Свяжитесь со мной через email.</div>
+                    </li>
+                    <li>
+                        <a href="https://t.me/CryptoFolioTactic_bot" target="_blank">Telegram канал</a>
+                        <div class="link-description">Узнавайте о моей тактике увеличения стоимости криптовалютного портфеля.</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="content-en" class="hidden">
+            <h2>Welcome to my personal website!</h2>
+            <p>Below you will find links to my resources.</p>
+            <div class="group">
+                <h2 class="group-title">My Channels</h2>
+                <ul>
+                    <li>
+                        <a href="https://www.youtube.com/channel/UC2KsT8IkA97i4gvDgDjVfsg" target="_blank">YouTube Channel</a>
+                        <div class="link-description">Watch my videos and streams on YouTube.</div>
+                    </li>
+                    <li>
+                        <a href="https://www.twitch.tv/helvla" target="_blank">Twitch Channel</a>
+                        <div class="link-description">Watch my live streams on Twitch.</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="group">
+                <h2 class="group-title">My Resources</h2>
+                <ul>
+                    <li>
+                        <a href="https://ru.ucoin.net/uid42474" target="_blank">Coin Collection</a>
+                        <div class="link-description">View my coin collection and exchange possibilities.</div>
+                    </li>
+                    <li>
+                        <a href="https://play.google.com/store/apps/details?id=com.hema.musicplayer" target="_blank">Music Player</a>
+                        <div class="link-description">Download my music player for Android with a unique rating system.</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="group">
+                <h2 class="group-title">Social Media</h2>
+                <ul>
+                    <li>
+                        <a href="https://www.instagram.com/petro_hema" target="_blank">Instagram</a>
+                        <div class="link-description">Follow my life and activities on Instagram.</div>
+                    </li>
+                    <li>
+                        <a href="https://www.tiktok.com/@h.e.lvl.a?is_from_webapp=1&sender_device=pc" target="_blank">TikTok</a>
+                        <div class="link-description">Watch my videos on TikTok.</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="group">
+                <h2 class="group-title">Gaming Profiles</h2>
+                <ul>
+                    <li>
+                        <a href="https://worldoftanks.eu/en/community/accounts/598102328-HEIVIA/?utm_source=global-nav&utm_medium=link&utm_campaign=wot-portal" target="_blank">World of Tanks</a>
+                        <div class="link-description">Check out my profile and achievements in World of Tanks.</div>
+                    </li>
+                    <li>
+                        <a href="https://worldoftanks.eu/referral/8401725917f543c3baea6d68729aed7f" target="_blank">World of Tanks Referral Program</a>
+                        <div class="link-description">Join the game through my referral code.</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="group">
+                <h2 class="group-title">Financial Support</h2>
+                <div class="support">
+                    <p>If you wish to support me financially, my Binance Id: 184921509</p>
+                </div>
+            </div>
+            <div class="group">
+                <h2 class="group-title">Contact</h2>
+                <ul>
+                    <li>
+                        <a href="mailto:feedback.hema@gmail.com">Email me</a>
+                        <div class="link-description">Contact me via email.</div>
+                    </li>
+                    <li>
+                        <a href="https://t.me/CryptoFolioTactic_bot" target="_blank">Telegram Channel</a>
+                        <div class="link-description">Learn about my tactics for increasing the value of a cryptocurrency portfolio.</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        function switchLanguage(language) {
+            document.getElementById('content-uk').classList.add('hidden');
+            document.getElementById('content-ru').classList.add('hidden');
+            document.getElementById('content-en').classList.add('hidden');
+            document.getElementById('content-' + language).classList.remove('hidden');
+        }
+    </script>
 </body>
 </html>
