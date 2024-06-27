@@ -105,29 +105,33 @@
         .language-switcher button:hover {
             background-color: #2c3e50;
         }
-        .pattern-left, .pattern-right {
-            position: fixed;
-            top: 0;
-            bottom: 0;
-            width: 50px;
-            background-color: #3498db;
-            color: white;
-            font-family: monospace;
-            font-size: 10px;
-            overflow: hidden;
-        }
-        .pattern-left {
-            left: 0;
-        }
-        .pattern-right {
-            right: 0;
-        }
-        .pattern-content {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            white-space: pre;
-        }
+        .ascii-pattern-left, .ascii-pattern-right {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    background-color: #3498db;
+    color: white;
+    font-family: monospace;
+    font-size: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.ascii-pattern-left {
+    left: 0;
+}
+
+.ascii-pattern-right {
+    right: 0;
+}
+
+.pattern-content {
+    white-space: pre;
+}
         .hidden {
             display: none;
         }
