@@ -41,6 +41,79 @@
         .language-switcher button:hover {
             background-color: #c0392b;
         }
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #3498db;
+        }
+        p, ul {
+            text-align: center;
+            color: #666;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 20px 0;
+        }
+        a {
+            text-decoration: none;
+            color: #3498db;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #e74c3c;
+        }
+        .link-description {
+            font-size: 0.9em;
+            color: #777;
+        }
+        .group-title {
+            font-size: 1.8em;
+            color: #333;
+            margin: 30px 0 10px;
+            text-align: center;
+        }
+        .hidden {
+            display: none;
+        }
+
+        /* Media query for smaller screens */
+        @media (max-width: 600px) {
+            .header {
+                font-size: 1.5em;
+                padding: 8px 16px;
+            }
+            .language-switcher {
+                flex-direction: column;
+                align-items: flex-end;
+            }
+            .language-switcher button {
+                padding: 8px 12px;
+                font-size: 0.7em;
+            }
+            .content {
+                padding: 10px;
+            }
+            h1, h2 {
+                font-size: 1.5em;
+            }
+            .group-title {
+                font-size: 1.5em;
+            }
+            .link-description {
+                font-size: 0.8em;
+            }
+        }
     </style>
 </head>
 <body>
@@ -188,16 +261,25 @@
         </ul>
     </div>
     <!-- Add more sections as needed -->
-</div>
+    <div id="content-ru" class="content hidden">
+        <!-- Контент російською мовою -->
+    </div>
+
+    <div id="content-en" class="content hidden">
+        <!-- Контент англійською мовою -->
+    </div>
+
     <script>
         function switchLanguage(language) {
-            // Сховати всі блоки з контентом
-            document.querySelectorAll('.content').forEach(function(element) {
-                element.classList.add('hidden');
+            // Сховати всі контентні блоки
+            var contents = document.querySelectorAll('.content');
+            contents.forEach(function(content) {
+                content.classList.add('hidden');
             });
 
-            // Показати блок з контентом вибраної мови
-            document.getElementById('content-' + language).classList.remove('hidden');
+            // Показати вибраний контентний блок
+            var selectedContent = document.getElementById('content-' + language);
+            selectedContent.classList.remove('hidden');
         }
     </script>
 </body>
