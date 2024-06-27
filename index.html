@@ -59,10 +59,8 @@
             margin-bottom: 20px;
             position: fixed;
             top: 20px;
-            left: 20px;
-        }
-        .logo span {
-            color: #e74c3c;
+            left: 50%;
+            transform: translateX(-50%);
         }
         .group-title {
             font-size: 1.8em;
@@ -71,21 +69,22 @@
             text-align: center;
         }
         .language-switcher {
-            text-align: center;
-            margin-bottom: 20px;
+            text-align: right;
+            margin: 0;
+            padding: 10px;
             position: fixed;
-            top: 20px;
-            right: 20px;
+            top: 0;
+            right: 0;
         }
         .language-switcher button {
-            margin: 0 10px;
-            padding: 10px 20px;
+            margin: 0 5px;
+            padding: 5px 10px;
             border: none;
             background-color: #3498db;
             color: white;
-            font-size: 1em;
+            font-size: 0.9em;
             cursor: pointer;
-            border-radius: 5px;
+            border-radius: 3px;
             transition: background-color 0.3s ease;
         }
         .language-switcher button:hover {
@@ -99,13 +98,6 @@
         }
     </style>
 </head>
-<body>
-    <div class="language-switcher">
-        <button onclick="switchLanguage('uk')">Українська</button>
-        <button onclick="switchLanguage('ru')">Русский</button>
-        <button onclick="switchLanguage('en')">English</button>
-    </div>
-    <div class="logo">НЕМА</span></div>
     <div id="content-uk">
         <h1>Ласкаво просимо на мій персональний сайт!</h1>
         <p>Нижче ви знайдете посилання на мої ресурси.</p>
