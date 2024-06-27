@@ -200,7 +200,7 @@
         </ul>
     </div>
 </div>
-<div id="content-ru" class="hidden">
+<div class="content hidden" id="content-ru">
     <h1>Добро пожаловать на мой персональный сайт!</h1>
     <p>Ниже вы найдете ссылки на мои ресурсы.</p>
     <div class="group">
@@ -275,7 +275,7 @@
         </ul>
     </div>
 </div>
-<div id="content-en" class="hidden">
+<div class="content hidden" id="content-en">
     <h1>Welcome to my personal website!</h1>
     <p>Below you will find links to my resources.</p>
     <div class="group">
@@ -352,16 +352,16 @@
 </div>
 <script>
     function switchLanguage(language) {
-        // Сховати всі контентні блоки
-        var contents = document.querySelectorAll('.content');
-        contents.forEach(function(content) {
-            content.classList.add('hidden');
-        });
+    // Сховати всі контентні блоки
+    var contents = document.querySelectorAll('.content');
+    contents.forEach(function(content) {
+        content.classList.add('hidden');
+    });
 
-        // Показати вибраний контентний блок
-        var selectedContent = document.getElementById('content-' + language);
-        selectedContent.classList.remove('hidden');
-    }
+    // Показати вибраний контентний блок
+    var selectedContent = document.getElementById('content-' + language);
+    selectedContent.classList.remove('hidden');
+}
 </script>
 </body>
 </html>
